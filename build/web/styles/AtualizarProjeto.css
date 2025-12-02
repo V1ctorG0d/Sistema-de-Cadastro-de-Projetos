@@ -1,0 +1,118 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 26 de nov. de 2025, 15:18:02
+    Author     : Graf7
+*/
+
+.popup_novoProjeto {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Mantém como antes */
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Caixa do popup — Mesma estrutura, só com estilo novo */
+.popup-content {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 400px; /* Mantido */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Mantido */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    animation: fadeIn 0.25s ease-out;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Formulário — mesma estrutura */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+}
+
+/* Label igual, só cor mais elegante */
+label {
+    text-align: left;
+    width: 100%;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs e selects com o MESMO estilo do index.jsp */
+input,
+select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: #f7f9fc;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus {
+    border-color: #0066cc;
+    box-shadow: 0 0 4px rgba(0,102,204,0.4);
+}
+
+/* Botão igual ao estilo do index.jsp */
+button {
+    padding: 10px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+    transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background: #004f9e;
+    transform: scale(1.03);
+}
+
+/* Botão fechar — mantém estrutura, só estilizado */
+.close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close:hover {
+    color: #000;
+    transform: scale(1.2);
+}

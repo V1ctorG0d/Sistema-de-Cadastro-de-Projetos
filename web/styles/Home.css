@@ -1,0 +1,165 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 26 de nov. de 2025, 14:35:41
+    Author     : Graf7
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f3f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background: #0066cc;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+main {
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Topo (botão + input) */
+main div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#BtnCadastrar {
+    background: #28a745;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+#BtnCadastrar img {
+    width: 24px;
+    filter: invert(100%);
+}
+
+#BtnCadastrar:hover {
+    background: #1f7e34;
+}
+
+input[type="search"] {
+    padding: 10px;
+    width: 240px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 15px;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+thead {
+    background: #0066cc;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background: #f0f7ff;
+}
+
+/* Botões de ação */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    transition: 0.2s;
+}
+
+#BtnAtualizar img {
+    width: 22px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Mensagem quando não há projetos */
+.empty-row td {
+    padding: 20px;
+    font-size: 18px;
+    background: #fdfdfd;
+    font-style: italic;
+}
+
+.search-container {
+    /* Define o Flexbox para alinhar o input e o botão lado a lado */
+    display: flex;
+    /* Alinha verticalmente no centro */
+    align-items: center; 
+}
+
+/* Ajuste o input de pesquisa para que ele não ocupe 100% do espaço disponível
+   dentro do novo contêiner (se necessário), e para que fique visualmente conectado ao botão */
+.search-container input[type="search"] {
+    /* Remova a largura fixa se quiser que ele se ajuste, ou mantenha: */
+    width: 200px; /* Exemplo de ajuste de largura */
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-right: -1px; /* Remove o espaçamento entre o input e o botão */
+    z-index: 1; /* Garante que a borda do input não seja coberta */
+}
+
+/* Estilo para o botão de pesquisa por ID */
+.search-container button[value="PESQUISARID"] {
+    background: #007bff; /* Exemplo de cor de fundo */
+    padding: 10px 12px;
+    border-radius: 6px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 38px; /* Ajusta a altura para corresponder ao input */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    /* Remove a transformação hover padrão do seu CSS se quiser um efeito diferente */
+    transition: background 0.2s;
+}
+
+.search-container button[value="PESQUISARID"] img {
+    /* Ajuste a imagem, se necessário, para ter contraste com a cor de fundo do botão */
+    filter: invert(100%);
+    width: 20px;
+}
+
+.search-container button[value="PESQUISARID"]:hover {
+    background: #0056b3; /* Cor mais escura no hover */
+    transform: none; /* Desativa a escala padrão do seu CSS para este botão */
+}
